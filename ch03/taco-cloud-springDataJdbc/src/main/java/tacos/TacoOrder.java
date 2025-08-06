@@ -1,5 +1,7 @@
 package tacos;
 
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -11,8 +13,11 @@ import java.util.Date;
 import java.util.List;
 
 @Data
+@Table
 public class TacoOrder {
     private static final long serialVersionUID = 1L;
+
+    @Id
     private Long id;
     private Date placedAt;
 
